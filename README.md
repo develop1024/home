@@ -28,6 +28,6 @@ Categories=Developer;
 
 #### MAC系统字体
 
-[华文细黑](https://develop1024.github.io/home/fonts/huawenxihei.ttf) 适合中文字体使用
+[华文细黑](https://develop1024.github.io/home/fonts/huawenxihei.ttf) 适合中文字体使用  
 [MONACO](https://develop1024.github.io/home/fonts/MONACO.TTF) 适合作为编程字体使用
 
