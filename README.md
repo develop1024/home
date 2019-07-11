@@ -8,10 +8,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 #### My example
 
-* todo demo
+* Todo demo
 
-> https://develop1024.github.io/home/todolist.html
-
+[Todo Demo](https://develop1024.github.io/home/todolist.html)
 
 
 
