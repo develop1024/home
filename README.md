@@ -14,6 +14,20 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 
 
+#### Ubuntu config Desktop
+
+```ini
+[Desktop Entry]
+Name=goland
+Exec=/usr/local/goland/bin/goland.sh
+Comment=goland
+Icon=/usr/local/goland/bin/goland.png
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Developer;
+```
+
 
 ### Markdown
 
