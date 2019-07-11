@@ -5,7 +5,7 @@
 
 * Vue Todo 小例子
 
-[Todo Demo](https://develop1024.github.io/home/todolist.html)
+[Todo Demo](https://develop1024.github.io/home/todolist.html?_blank)
 
 
 
