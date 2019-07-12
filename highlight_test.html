@@ -2,7 +2,7 @@
     <head>
         <title>highlight.js</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="highlight/styles/androidstudio.css">
+        <link rel="stylesheet" href="highlight/styles/monokai.css">
         <script src="highlight/highlight.pack.js"></script>
         <style>
             *{
@@ -12,86 +12,86 @@
     </head>
     <body>
         <script>hljs.initHighlightingOnLoad();</script>
-                
+        <h3>ab猜数字游戏</h3>
         <pre><code class="python">
-                import random
-                
-                # 随机生成一个4位不重复数
-                num = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
-                print('答案=', num)
-                
-                # 初始化分数
-                rA, rB, pA, pB = 0, 0, 0, 0
-                
-                # 计算猜测
-                def guessNum(num1, num2, marks):
-                    global rA, rB, pA, pB
-                
-                    # 判断得A的
-                    for i in range(len(num1)):
-                        if num1[i] == num2[i]:
-                            if marks == 'robot':
-                                rA += 1
-                            else:
-                                pA += 1
-                
-                    # 判断得B的
-                    for in1, val1 in enumerate(num1):
-                        for in2, val2 in enumerate(num2):
-                            if val1 == val2 and in1 != in2:
-                               if marks == 'robot':
-                                   rB += 1
-                               else:
-                                   pB += 1
-                
-                def main():
-                    # 玩家输入数字
-                    pnum = 0
-                
-                    # 记录玩家输入历史
-                    history = []
-                
-                    while pnum != num:
-                        global rA, rB, pA, pB
-                
-                        # 初始化分数
-                        rA, rB, pA, pB = 0, 0, 0, 0
-                
-                        # 玩家输入
-                        pnum = input('\ninput num:')
-                        history.append(pnum)
-                
-                        # 验证玩家输入
-                        if len(set(pnum)) != 4 or len(pnum)!=4:
-                            print('请输入4位不重复的数....')
-                            continue
-                
-                        # 机器人输入
-                        robot = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
-                
-                        # 如果电脑出的是玩家出过的则重新出
-                        while robot in history:
-                            robot = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
-                
-                        # 玩家猜
-                        guessNum(num, pnum, 'person')
-                
-                        # 机器猜
-                        guessNum(num, robot, 'robot')
-                
-                        # 显示结果
-                        print('-'*50)
-                        print('帅气的你猜的%s->%dA%dB' % (pnum, pA, pB))
-                        print('傻机器猜的是%s->%dA%dB' % (robot, rA, rB))
-                        print('-'*50)
-                    else:
-                        if pA == 4:
-                            print('帅气的你取得了胜利666!')
-                        elif rA == 4:
-                            print('很遗憾机器人取得了胜利, 你输了!')
-                
-                if __name__ == '__main__':
-                    main()
+import random
+
+# 随机生成一个4位不重复数
+num = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
+print('答案=', num)
+
+# 初始化分数
+rA, rB, pA, pB = 0, 0, 0, 0
+
+# 计算猜测
+def guessNum(num1, num2, marks):
+    global rA, rB, pA, pB
+
+    # 判断得A的
+    for i in range(len(num1)):
+        if num1[i] == num2[i]:
+            if marks == 'robot':
+                rA += 1
+            else:
+                pA += 1
+
+    # 判断得B的
+    for in1, val1 in enumerate(num1):
+        for in2, val2 in enumerate(num2):
+            if val1 == val2 and in1 != in2:
+                if marks == 'robot':
+                    rB += 1
+                else:
+                    pB += 1
+
+def main():
+    # 玩家输入数字
+    pnum = 0
+
+    # 记录玩家输入历史
+    history = []
+
+    while pnum != num:
+        global rA, rB, pA, pB
+
+        # 初始化分数
+        rA, rB, pA, pB = 0, 0, 0, 0
+
+        # 玩家输入
+        pnum = input('\ninput num:')
+        history.append(pnum)
+
+        # 验证玩家输入
+        if len(set(pnum)) != 4 or len(pnum)!=4:
+            print('请输入4位不重复的数....')
+            continue
+
+        # 机器人输入
+        robot = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
+
+        # 如果电脑出的是玩家出过的则重新出
+        while robot in history:
+            robot = ''.join([ str(i) for i in random.sample(range(0, 10), 4)])
+
+        # 玩家猜
+        guessNum(num, pnum, 'person')
+
+        # 机器猜
+        guessNum(num, robot, 'robot')
+
+        # 显示结果
+        print('-'*50)
+        print('帅气的你猜的%s->%dA%dB' % (pnum, pA, pB))
+        print('傻机器猜的是%s->%dA%dB' % (robot, rA, rB))
+        print('-'*50)
+    else:
+        if pA == 4:
+            print('帅气的你取得了胜利666!')
+        elif rA == 4:
+            print('很遗憾机器人取得了胜利, 你输了!')
+
+if __name__ == '__main__':
+    main()
         </code></pre>
         
 

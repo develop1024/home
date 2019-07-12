@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>code</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="prism/prism.css">
+    </head>
+    <body>
+        <h3>Python Threading</h3>
+        <pre><code class="language-python">
+import threading
+
+def test():
+    threading.Thread(target=lambda: print('hello world')).start()
+
+if __name__ == '__main__':
+    test()
+        </code></pre>
+
+<h3>Golang</h3>
+        <pre><code class="language-go">
+package main
+
+import(
+    "fmt"
+)
+
+func main(){
+    fmt.Println("hello world")
+}
+        </code></pre>
+
+        <script src="prism/prism.js"></script>
+    </body>
+</html>
