@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>linux添加桌面图标</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="highlight/styles/atom-one-dark-reasonable.css">
+        <script src="highlight/highlight.pack.js"></script>
+        <style>
+            *{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <pre><code class="shell">vim /usr/share/applications/youapp.desktop</code></pre>
+
+        只需要修改Exec(程序执行文件)和Icon(程序图标文件)
+        <pre><code class="ini">[Desktop Entry]
+Name=goland
+Exec=/usr/local/goland/bin/goland.sh
+Comment=goland
+Icon=/usr/local/goland/bin/goland.png
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Developer;</code></pre>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

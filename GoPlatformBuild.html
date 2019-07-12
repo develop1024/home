@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Golang交叉编译</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="highlight/styles/atom-one-dark-reasonable.css">
+        <script src="highlight/highlight.pack.js"></script>
+        <style>
+            *{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>1.切换到项目工程的源码目录</p>
+        <p>2.选择相应平台组合, 编译程序</p>
+        <pre><code class="shell">CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build</code></pre>
+        <p>CGO_ENABLED关闭CGO，GOOS设置目标操作系统，GOARCH设置目标架构  </p>
+        <p>可组合有如下</p>
+
+
+        
+        <pre><code class="shell">$GOOS        $GOARCH
+android     arm
+darwin      386
+darwin      amd64
+darwin      arm
+darwin      arm64
+dragonfly   amd64
+freebsd     386
+freebsd     amd64
+freebsd     arm
+linux       386
+linux       amd64
+linux       arm
+linux       arm64
+linux       ppc64
+linux       ppc64le
+linux       mips
+linux       mipsle
+linux       mips64
+linux       mips64le
+netbsd      386
+netbsd      amd64
+netbsd      arm
+openbsd     386
+openbsd     amd64
+openbsd     arm
+plan9       386
+plan9       amd64
+solaris     amd64
+windows     386
+windows     amd64</code></pre>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
