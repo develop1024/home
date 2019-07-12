@@ -1,3 +1,5 @@
+[TOC]
+
 ## Welcome to My Pages
 
 ![图片alt](./imgs/Spider-Man.gif ''Superman'')
