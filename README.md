@@ -9,8 +9,8 @@
 * [常用配置及例子](#常用配置及例子)  
 * [Linux添加桌面图标](#Linux添加桌面图标)  
 * [MAC系统字体](#MAC系统字体)  
-* [highlightjs](#highlightjs)  
-* [golang 交叉编译](#golang 交叉编译)  
+* [HTML中代码高亮显示highlightjs](#HTML中代码高亮显示highlightjs)  
+* [golang 交叉编译](#golang交叉编译)  
 
 
 
@@ -46,7 +46,7 @@ Categories=Developer;
 
 
 
-## HTML中代码高亮显示 highlightjs
+## HTML中代码高亮显示highlightjs
 
 [highlightjs Demo](https://develop1024.github.io/home/highlight_test.html){:target="_blank"}  
 [highlightjs](https://highlightjs.org/){:target="_blank"}
@@ -71,7 +71,7 @@ Categories=Developer;
 ```
 
 
-## golang 交叉编译
+## golang交叉编译
 
 1.切换到项目工程的源码目录   
 
@@ -118,6 +118,3 @@ solaris     amd64
 windows     386
 windows     amd64
 ```
-
-
-
