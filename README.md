@@ -6,11 +6,11 @@
 
 # Superman
 
-[常用配置及例子](##常用配置及例子)
-[Linux添加桌面图标](##Linux添加桌面图标)
-[MAC系统字体](##MAC系统字体)
-[HTML中代码高亮显示 highlightjs](##HTML中代码高亮显示 highlightjs)
-[golang 交叉编译](##golang 交叉编译)
+-[常用配置及例子](##常用配置及例子)
+-[Linux添加桌面图标](##Linux添加桌面图标)
+-[MAC系统字体](##MAC系统字体)
+-[HTML中代码高亮显示 highlightjs](##HTML中代码高亮显示 highlightjs)
+-[golang 交叉编译](##golang 交叉编译)
 
 
 
