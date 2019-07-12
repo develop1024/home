@@ -2,7 +2,7 @@
 
 ## Superman
 
-![图片alt](./imgs/Spider-Man.gif ''Superman'')
+![图片alt](./imgs/Spider-Man.png ''Superman'')
 
 
 ## Navigation
