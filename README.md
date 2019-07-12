@@ -1,16 +1,15 @@
 
 
-## Welcome to My Pages
+## Superman
 
 ![图片alt](./imgs/Spider-Man.gif ''Superman'')
 
-# Superman
 
 * [常用配置及例子](#常用配置及例子)  
 * [Linux添加桌面图标](#Linux添加桌面图标)  
 * [MAC系统字体](#MAC系统字体)  
-* [HTML中代码高亮显示highlightjs](#HTML中代码高亮显示highlightjs)  
-* [golang 交叉编译](#golang交叉编译)  
+* [代码高亮显示](#代码高亮显示)  
+* [golang交叉编译](#golang交叉编译)  
 
 
 
@@ -46,7 +45,7 @@ Categories=Developer;
 
 
 
-## HTML中代码高亮显示highlightjs
+## 代码高亮显示
 
 [highlightjs Demo](https://develop1024.github.io/home/highlight_test.html){:target="_blank"}  
 [highlightjs](https://highlightjs.org/){:target="_blank"}
