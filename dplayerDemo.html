@@ -12,15 +12,12 @@
     <title>Dplayer Demo</title>
     <link rel="stylesheet" href="./dplayer/dist/DPlayer.min.css">
     <style>
-        .container{
-            margin-top: 30px;
-        }
         #dplayer{
             width: 100%; 
             height: 600px; 
             margin: 0 auto;
         }
-        p{
+        p, .list-group a{
             cursor: pointer;
         }
         p a:hover{
@@ -30,27 +27,78 @@
     </style>
 </head>
 <body>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="container-fluid"> 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Music</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">发布</a></li>
+                    <li><a href="#">分类</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="输入要查找的内容" class="form-control">
+                        <input type="submit" class="btn btn-default" value="搜索">
+                    </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>登录</a></li>
+                    <li><a>注册</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 内容部分 -->
     <div class="container">
         <div class="row">
+            <!-- 视频播放区域 -->
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label class="label label-success" id="title"></label> 
+                        <label class="label label-info">好听啊</label>
+                        <label class="label label-warning">好看啊</label>
+                    </div>
+                    <div class="panel-body">
+                        <div id="dplayer"></div>
+                    </div>
+                    <div class="panel-footer">
+                        播放次数 <span class="badge">20001k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视频列表区域 -->
             <div class="col-md-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">视频列表</div>
                     <div class="panel-body">
-                        <p><a data="1">1.mp4</a></p>
-                        <p><a data="2">不能说的秘密</a></p>
-                        <p><a data="3">3.mp4</a></p>
-                        <p><a data="4">痴心绝对</a></p>
-                        <p><a data="5">我要的飞翔</a></p>
-                        <p><a data="6">今生缘</a></p>
-                        <p><a data="7">像风一样自由</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-10">
-                <div class="panel panel-default">
-                    <div class="panel-heading">视频 - <span id="title"></span></div>
-                    <div class="panel-body">
-                        <div id="dplayer"></div>
+                        <div class="list-group">
+                            <a data="1" class="list-group-item">1.mp4</a>
+                            <a data="2" class="list-group-item">不能说的秘密</a>
+                            <a data="3" class="list-group-item">3.mp4</a>
+                            <a data="4" class="list-group-item">痴心绝对</a>
+                            <a data="5" class="list-group-item">我要的飞翔</a>
+                            <a data="6" class="list-group-item">今生缘</a>
+                            <a data="7" class="list-group-item">像风一样自由</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +116,7 @@
         });
 
         // 播放当前点击的视频
-        $('p a').click(function(e){
+        $('.list-group a').click(function(e){
             // 设置视频标题
             title = e.target.textContent;
             $('#title').html(title);
