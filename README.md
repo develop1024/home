@@ -50,3 +50,7 @@
 
 ## jQuery请求github api 
 * [Jquery请求github api](https://develop1024.github.io/home/githubforuserinfo.html){:target="_blank"}  
+
+
+## Dplqyer 播放器
+* [Dplqyer 播放器示例](https://develop1024.github.io/home/dplayerDemo.html){:target="_blank"}  

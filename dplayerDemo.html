@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dplayer Demo</title>
+    <link rel="stylesheet" href="./dplayer/dist/DPlayer.min.css">
+    <style>
+        ul li{
+            list-style: none;
+        }
+        #content{
+            text-align: center;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <button id="v1">1.mp4</button>
+        <button id="v2">2.mp4</button>
+        <button id="v3">3.mp4</button>
+        <button id="v4">4.mp4</button>
+        <button id="v5">5.mp4</button>
+        <button id="v6">6.mp4</button>
+        <button id="v7">7.mp4</button>
+    </div>
+    <div id="dplayer" style="width: 1200px; height: 600px; margin: 0 auto;"></div>
+    <script src="./dplayer/dist/DPlayer.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var dp = new DPlayer({
+            container: document.getElementById('dplayer'),
+            video: {
+                url: './video/1.mp4'
+            },
+        });
+
+        $('#v1').click(function(){
+            dp.switchVideo({
+                url: './video/1.mp4',
+            });
+        })
+        
+
+        $('#v2').click(function(){
+            dp.switchVideo({
+                url: './video/2.mp4',
+            });
+        })
+
+
+        $('#v3').click(function(){
+            dp.switchVideo({
+                url: './video/3.mp4',
+            });
+        })
+
+        $('#v4').click(function(){
+            dp.switchVideo({
+                url: './video/4.mp4',
+            });
+        })
+
+        $('#v5').click(function(){
+            dp.switchVideo({
+                url: './video/5.mp4',
+            });
+        })
+
+        $('#v6').click(function(){
+            dp.switchVideo({
+                url: './video/6.mp4',
+            });
+        })
+
+        $('#v7').click(function(){
+            dp.switchVideo({
+                url: './video/7.mp4',
+            });
+        })
+    </script>
+</body>
+</html>
