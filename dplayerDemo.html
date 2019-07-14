@@ -36,19 +36,19 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">视频列表</div>
                     <div class="panel-body">
-                        <p><a id="v1">1.mp4</a></p>
-                        <p><a id="v2">不能说的秘密</a></p>
-                        <p><a id="v3">3.mp4</a></p>
-                        <p><a id="v4">痴心绝对</a></p>
-                        <p><a id="v5">我要的飞翔</a></p>
-                        <p><a id="v6">今生缘</a></p>
-                        <p><a id="v7">像风一样自由</a></p>
+                        <p><a data="1">1.mp4</a></p>
+                        <p><a data="2">不能说的秘密</a></p>
+                        <p><a data="3">3.mp4</a></p>
+                        <p><a data="4">痴心绝对</a></p>
+                        <p><a data="5">我要的飞翔</a></p>
+                        <p><a data="6">今生缘</a></p>
+                        <p><a data="7">像风一样自由</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-md-10">
                 <div class="panel panel-default">
-                    <div class="panel-heading">视频</div>
+                    <div class="panel-heading">视频 - <span id="title"></span></div>
                     <div class="panel-body">
                         <div id="dplayer"></div>
                     </div>
@@ -58,55 +58,27 @@
     </div>
     <script src="./dplayer/dist/DPlayer.min.js"></script>
     <script>
+        $('#title').html('1.mp4');
+        
         var dp = new DPlayer({
             container: document.getElementById('dplayer'),
             video: {
-                url: './video/1.mp4'
+                url: './video/1.mp4',
             },
         });
 
-        $('#v1').click(function(){
-            dp.switchVideo({
-                url: './video/1.mp4',
-            });
-        })
-        
+        // 播放当前点击的视频
+        $('p a').click(function(e){
+            // 设置视频标题
+            title = e.target.textContent;
+            $('#title').html(title);
 
-        $('#v2').click(function(){
+            data = $(this).attr("data");
             dp.switchVideo({
-                url: './video/2.mp4',
+                url: './video/'+ data +'.mp4',
             });
-        })
-
-
-        $('#v3').click(function(){
-            dp.switchVideo({
-                url: './video/3.mp4',
-            });
-        })
-
-        $('#v4').click(function(){
-            dp.switchVideo({
-                url: './video/4.mp4',
-            });
-        })
-
-        $('#v5').click(function(){
-            dp.switchVideo({
-                url: './video/5.mp4',
-            });
-        })
-
-        $('#v6').click(function(){
-            dp.switchVideo({
-                url: './video/6.mp4',
-            });
-        })
-
-        $('#v7').click(function(){
-            dp.switchVideo({
-                url: './video/7.mp4',
-            });
+            // 播放
+            dp.play()
         })
     </script>
 </body>
