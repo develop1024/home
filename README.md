@@ -54,3 +54,48 @@
 
 ## Dplqyer 播放器
 * [Dplqyer 播放器示例](https://develop1024.github.io/home/dplayerDemo.html){:target="_blank"}  
+
+
+## VS Code主题配色
+``` Dracula Soft ```
+
+## 生成ssh密钥
+```
+ssh-keygen -t rsa -C '656562721@qq.com'
+```
+
+## git基本使用
+```
+git 全局设置
+git config --global user.name "develop1024"
+git config --global user.email "656562721@qq.com"
+
+提交一个本地仓库到云仓库
+git init
+touch README.md
+git add README.md (提交全部 .)
+git commit -m "first commit"
+git remote add origin git@gitee.com:develop1024/blog.git
+git push -u origin master
+```
+
+
+## 取golang模板
+```
+{{ index $val 1 }}
+```
+
+
+## 选颜色
+https://flatuicolors.com/
+
+
+## linux制作win启动盘工具woeusb
+``` 格式化为NTFS ```
+
+```
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install woeusb
+```
+
