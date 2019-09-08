@@ -81,6 +81,7 @@ git push -u origin master
 
 
 ## 取golang模板
+
 ```
 {{ index $val 1 }}
 ```
@@ -98,4 +99,8 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
 sudo apt install woeusb
 ```
+
+## 字符串转json
+
+* [字符串转json](https://develop1024.github.io/home/tojson.html){:target="_blank"}  
 
