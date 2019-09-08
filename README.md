@@ -82,9 +82,9 @@ git push -u origin master
 
 ## 取golang模板
 
-```
+`
 {{ index $val 1 }}
-```
+`
 
 
 ## 选颜色
