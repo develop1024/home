@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #nav ul li{
+            float: left;
+            text-decoration: none;
+            margin:0px 40px;
+            list-style: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        #nav ul li:hover{
+            color: red;
+        }
+        #nav ul li:active{
+            color: blue;
+        }
+
+        #nav{
+            height: 80px;
+            /* margin: -20px 0 0 0; */
+            line-height: 80px;
+            box-shadow: 0px 3px 3px #ddd;
+        }
+        #goTop{
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 10px;
+            bottom: 10%;
+        }
+        #goTop:hover{
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        #goTop:active{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="nav">
+            <ul>
+                <li>home</li>
+                <li>nav</li>
+                <li>concat</li>
+                <li>about</li>
+                <li>index</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="goTop">
+            <span>Top</span>
+        </div>
+    </div>
+    <div id="footer"></div>
+<script>
+    $(function(){
+        $('#goTop').click(function(){
+            window.location = '#header';
+        });
+    });
+</script>
+</body>
+</html>
