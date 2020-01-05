@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <input type="checkbox" v-model="selectall" @change="handleSelectAll"> select all
+            <p v-for="data in datalist">
+                <input type="checkbox" v-model="datagroup" :value="data" @change="handleChange">
+                {{ data }}
+                <button @click="handleReduce(data)">-</button>
+                {{data.number}}
+                <button @click="data.number++">+</button>
+                
+            </p>
+
+            总计: {{ getSum() }}
+            <p>{{ datagroup }}</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app', 
+            data: {
+                datalist: [
+                {'id': 1, 'name': 'iphone X', 'price': 5000, 'number': 1 },
+                {'id': 2, 'name': '小米8', 'price': 2200, 'number': 2},
+                {'id': 3, 'name': '华为Meta30 Pro', 'price': 5600, 'number': 1}
+                ],
+                datagroup: [],
+                selectall: false
+            },
+            methods: {
+                getSum(){
+                    var sum = 0;
+                    for(i in this.datagroup){
+                        sum += this.datagroup[i].price * this.datagroup[i].number;
+                    }
+                    return sum;
+                },
+                handleSelectAll(){
+                    if(this.selectall===true){
+                        this.datagroup = this.datalist;
+                    }else{
+                        this.datagroup = [];
+                    }
+                },
+                handleChange(){
+                    if(this.datagroup.length === this.datalist.length){
+                        this.selectall = true;
+                    }else{
+                        this.selectall = false;
+                    }
+                },
+                handleReduce(data){
+                    if(data.number-- <= 1){
+                        data.number = 1;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
